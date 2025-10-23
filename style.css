@@ -1,0 +1,158 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1e40af;
+  --secondary: #6b7280;
+  --bg: #f0f9ff;
+  --card-bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #93c5fd, #dbeafe);
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--text);
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Cards principais */
+.card {
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  color: var(--primary-dark);
+}
+
+/* Painel de informações */
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.number-box {
+  flex: 1;
+  min-width: 180px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.number-box strong {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+}
+
+.number-box:hover {
+  background: #dbeafe;
+  transform: scale(1.05);
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: scale(1.07);
+}
+
+button.secondary {
+  background: var(--secondary);
+}
+
+button.secondary:hover {
+  background: #4b5563;
+}
+
+/* Console estilizado */
+pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 18px;
+  border-radius: 12px;
+  overflow: auto;
+  max-height: 280px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Rodapé */
+footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  max-width: 700px;
+}
